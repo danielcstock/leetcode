@@ -1,4 +1,4 @@
-# Balance a Binary Search Tree (BST)
+# [Balance a Binary Search Tree (BST)](https://leetcode.com/problems/balance-a-binary-search-tree/description/)
 
 Given the `root` of a binary search tree, return a balanced binary search tree with the same node values. If there is more than one answer, return any of them.
 
