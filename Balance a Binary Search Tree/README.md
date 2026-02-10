@@ -23,3 +23,11 @@ A binary search tree is balanced if the depth of the two subtrees of every node 
 ## Constraints:
 - The number of nodes in the tree is in the range [1, 104].
 - `1 <= Node.val <= 105`
+
+## Solution
+The first step is to transform the tree into a sorted list of integers.
+We do this by calling a function that recursively traverses the tree and adds each node’s value to a list, visiting all nodes on the left side first and then the right side.
+
+Once the sorted list is built, we call the function that creates the balanced tree, passing the `low` and `high` parameters, which represent the starting and ending indexes of the list.
+
+This second function first checks whether `low` is greater than `high`. If it is, it returns `null`. Otherwise, it finds the middle element of the list and creates a node with that value. Then, it recursively calls itself for the left half of the list and again for the right half. This ensures that each subtree is balanced, with its root chosen from the middle of the corresponding sublist.
